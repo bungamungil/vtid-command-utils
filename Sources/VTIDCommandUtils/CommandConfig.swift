@@ -21,8 +21,6 @@ public struct CommandConfig {
         )
     )
     
-    public var migrations: Migrations = Migrations()
-    
 }
 
 

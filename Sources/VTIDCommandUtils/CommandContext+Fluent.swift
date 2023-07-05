@@ -15,18 +15,4 @@ extension CommandContext {
         CommandConfigs.databases
     }
     
-    public var migrations: Migrations {
-        CommandConfigs.migrations
-    }
-    
-    public var migrator: Migrator {
-        Migrator(
-            databases: self.databases,
-            migrations: self.migrations,
-            logger: .init(label: "vtid-migrator"),
-            on: self.databases.eventLoopGroup.any(),
-            migrationLogLevel: .info
-        )
-    }
-    
 }
