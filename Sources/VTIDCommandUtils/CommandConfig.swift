@@ -10,9 +10,9 @@ import NIOCore
 import NIOPosix
 
 
-struct CommandConfig {
+public struct CommandConfig {
     
-    var databases: Databases = Databases(
+    public var databases: Databases = Databases(
         threadPool: NIOThreadPool(
             numberOfThreads: System.coreCount
         ),
@@ -21,9 +21,9 @@ struct CommandConfig {
         )
     )
     
-    var migrations: Migrations = Migrations()
+    public var migrations: Migrations = Migrations()
     
 }
 
 
-let CommandConfigs = CommandConfig()
+public let CommandConfigs = CommandConfig()
