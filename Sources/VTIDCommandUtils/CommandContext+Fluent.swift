@@ -15,4 +15,8 @@ extension CommandContext {
         CommandConfigs.databases
     }
     
+    public var db: Database {
+        CommandConfigs.db
+    }
+    
 }
